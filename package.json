@@ -1,0 +1,19 @@
+{
+  "name": "trim-request",
+  "version": "1.0.0",
+  "description": "Express middleware to trim all incoming request values",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "trim",
+    "body",
+    "params",
+    "query",
+    "string"
+  ],
+  "author": "Younes Elfe <younes.efe@gmail.com>",
+  "license": "MIT"
+}
