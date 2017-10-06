@@ -30,9 +30,17 @@ function trimStringProperties (obj) {
 // trimRequest middleware: trim all request object: body, params, query
 var all = function ( req, res, next ) {
 
-    trimStringProperties(req.body);
-    trimStringProperties(req.params);
-    trimStringProperties(req.query);
+    if ( req.body ) {
+        trimStringProperties(req.body);
+    }
+
+    if ( req.params ) {
+        trimStringProperties(req.params);
+    }
+
+    if ( req.query ) {
+        trimStringProperties(req.query);
+    }
 
     next();
 
@@ -40,17 +48,23 @@ var all = function ( req, res, next ) {
 
 // trimBody middleware: trim only the body object
 var body = function (req, res, next) {
-    trimStringProperties(req.body);
+    if ( req.body ) {
+        trimStringProperties(req.body);
+    }
     next();
 }
 
 var param = function (req, res, next) {
-    trimStringProperties(req.body);
+    if ( req.params ) {
+        trimStringProperties(req.params);
+    }
     next();
 }
 
 var query = function (req, res, next) {
-    trimStringProperties(req.query);
+    if ( req.query ) {
+        trimStringProperties(req.query);
+    }
     next();
 }
 
