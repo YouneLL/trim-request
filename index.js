@@ -1,7 +1,4 @@
-
-
 // trim all string prpoerties of an object
-
 function trimStringProperties (obj) {
 
     if (obj !== null && typeof obj === 'object') {
@@ -30,8 +27,36 @@ function trimStringProperties (obj) {
 }
 
 
-var trimRequest = function ( req, res, next ) {
+// trimRequest middleware: trim all request object: body, params, query
+var all = function ( req, res, next ) {
 
-    trimStringProperties
+    trimStringProperties(req.body);
+    trimStringProperties(req.params);
+    trimStringProperties(req.query);
+
+    next();
 
 }
+
+// trimBody middleware: trim only the body object
+var body = function (req, res, next) {
+    trimStringProperties(req.body);
+    next();
+}
+
+var param = function (req, res, next) {
+    trimStringProperties(req.body);
+    next();
+}
+
+var query = function (req, res, next) {
+    trimStringProperties(req.query);
+    next();
+}
+
+module.exports = {
+    all: all,
+    body: body,
+    param: param,
+    query: query
+};
