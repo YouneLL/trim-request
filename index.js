@@ -15,7 +15,7 @@ function trimStringProperties (obj) {
                 
                 // if it's a string remove begin and end whitespaces
                 if ( typeof obj[prop] === 'string' ) {
-                    obj[prop].trim();
+                    obj[prop] = obj[prop].trim();
                 }
 
             }
