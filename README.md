@@ -19,7 +19,7 @@ param will trim the params object
 and query method to trim the query string object 
 
 ```javascript
-const trimRequest = require('trimRequest');
+const trimRequest = require('trim-request');
 
 app.post('/person', trimRequest.all, (req, res, next) => { 
 
