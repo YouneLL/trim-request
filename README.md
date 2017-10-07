@@ -10,13 +10,13 @@ npm install trim-request
 
 trim-request is very simple to use, just import the package and use one of its methods:
 
-the all method will trim body, params and query objects in order
+`trimRequest.all`  trim body, params and query objects
 
-body will trim only the body object
+`trimRequest.body` trim only the body object
 
-param will trim the params object
+`trimRequest.param` trim the params object
 
-and query method to trim the query string object 
+`trimRequest.query` trim the query string object 
 
 ```javascript
 const trimRequest = require('trim-request');
