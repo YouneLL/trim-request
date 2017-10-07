@@ -1,6 +1,6 @@
 {
   "name": "trim-request",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Express middleware to trim all incoming request object",
   "main": "index.js",
   "scripts": {
