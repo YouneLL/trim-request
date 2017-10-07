@@ -1,7 +1,7 @@
 {
   "name": "trim-request",
   "version": "1.0.0",
-  "description": "Express middleware to trim all incoming request values",
+  "description": "Express middleware to trim all incoming request object",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
